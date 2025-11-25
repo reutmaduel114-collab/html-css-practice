@@ -1,0 +1,276 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(235, 18%, 26%);
+    font-family: "Roboto", sans-serif;
+}
+
+/* ----- main card ----- */
+
+.main_container {
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    padding: 18px;
+    gap: 24px;
+    max-width: 800px;
+    max-height: 500px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.left_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    padding-right: 5px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.image-mobile {
+    display: none;
+}
+
+.image-desktop {
+    display: block;
+}
+
+.header {
+    color: hsl(234, 29%, 20%);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.check_list {
+    display: flex;
+    flex-direction: column;
+    line-height: 200%;
+}
+
+.icon-list {
+    margin-top: 3px;
+}
+
+.email_container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.email_error {
+    color: hsl(4, 100%, 67%);
+    font-size: 12px;
+    font-weight: 700;
+    visibility: hidden;
+}
+
+.email_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email_box.error {
+    border: 1px solid hsl(4, 100%, 67%);
+    background-color: hsl(4, 100%, 94%);
+    color: hsl(4, 100%, 67%);
+}
+
+.email_box {
+    height: 48px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 0 16px;
+    border: 1px solid hsl(231, 7%, 60%);
+}
+
+.button {
+    background-color: hsl(234, 29%, 20%);
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    color: #fff;
+    height: 52px;
+    margin-top: -20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, hsl(346, 100%, 66%), hsl(15, 100%, 61%));
+    box-shadow: 0 15px 30px rgba(255, 98, 87, 0.5);
+}
+
+/* ----- responsive ----- */
+
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+        min-height: 100vh;
+        background-color: white;
+    }
+
+    .main_container {
+        flex-direction: column;
+        padding: 0;
+        max-height: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .right_container {
+        order: -1;
+        width: 100%;
+    }
+
+    .image-desktop {
+        display: none;
+    }
+
+    .image-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .image {
+        height: auto !important;
+        border-radius: 0;
+    }
+
+    .left_container {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .header {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .check_list {
+        margin-bottom: 24px;
+        line-height: 1.7;
+    }
+
+    .email_container {
+        margin-top: 16px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        font-size: 16px;
+        margin-top: -5px;
+    }
+}
+
+/* ===== Success state ===== */
+
+.success_container {
+    display: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 360px;
+    max-height: 500px;
+    width: 100%;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+}
+
+.success_content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.success_icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: hsl(4, 100%, 67%, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success_icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.success_title {
+    font-size: 32px;
+    color: hsl(234, 29%, 20%);
+    margin: 0;
+}
+
+.success_text {
+    font-size: 14px;
+    color: hsl(235, 18%, 26%);
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.success-email {
+    font-weight: 700;
+}
+
+/* success – mobile */
+
+@media (max-width: 768px) {
+    .success_container {
+        max-width: 375px;
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: none;
+        margin: 0 auto;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .success_title {
+        font-size: 28px;
+    }
+
+    .success_content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 520px;
+    }
+
+    .success_container {
+        flex: 1;
+    }
+
+
+    .dismiss-btn {
+        margin-top: auto;
+    }
+
+
+}

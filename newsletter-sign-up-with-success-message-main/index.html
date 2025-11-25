@@ -1,54 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
+
 <body>
 
-  
+  <!-- מסך הטופס הראשי -->
+  <div class="main_container">
+    <div class="left_container">
 
-  <!-- Sign-up form start -->
+      <header class="header">Stay updated!</header>
+      <div>Join 60,000+ product managers receiving monthly updates on:</div>
 
-  Stay updated!
+      <div class="check_list">
+        <div>
+          <img class="icon-list" src="assets/images/icon-list.svg" alt="">
+          Product discovery and building what matters
+        </div>
+        <div>
+          <img class="icon-list" src="assets/images/icon-list.svg" alt="">
+          Measuring to ensure updates are a success
+        </div>
+        <div>
+          <img class="icon-list" src="assets/images/icon-list.svg" alt="">
+          And much more!
+        </div>
+      </div>
 
-  Join 60,000+ product managers receiving monthly updates on:
+      <div class="email_container">
+        <div class="email_row">
+          <label class="email_label">Email address</label>
+          <span class="email_error">Valid email required</span>
+        </div>
+        <input class="email_box" type="email" id="email" placeholder="email@company.com">
+      </div>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+      <button class="button subscribe-btn">Subscribe to monthly newsletter</button>
+    </div>
 
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="right_container">
+      <!-- for desktop -->
+      <img class="image image-desktop" src="./assets/images/illustration-sign-up-desktop.svg" alt="">
+      <!-- for mobile -->
+      <img class="image image-mobile" src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+    </div>
   </div>
+
+  <!-- מסך הצלחה -->
+  <div class="success_container">
+    <div class="success_content">
+      <div class="success_icon">
+        <img src="./assets/images/icon-success.svg" alt="Success">
+      </div>
+
+      <h1 class="success_title">Thanks for subscribing!</h1>
+
+      <p class="success_text">
+        A confirmation email has been sent to
+        <span class="success-email">ash@loremcompany.com</span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <button class="button dismiss-btn">Dismiss message</button>
+    </div>
+  </div>
+
 </body>
+
 </html>
