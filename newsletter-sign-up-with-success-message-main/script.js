@@ -11,6 +11,8 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+
+
 emailInput.addEventListener("input", function () {
   const email = emailInput.value.trim();
 
